@@ -182,8 +182,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");*/
 			*/ ?>
 			<div class="logo">
 				<a href="<?php echo get_home_url(); ?>" title="">
-					<span class="branco"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-2pra1-branco.png"></span>
-					<span class="vermelho"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-2pra1-vermelho.png"></span>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-aceto.jpg">
 				</a>
 			</div>
 			<?php get_template_part( 'nav' ); ?>

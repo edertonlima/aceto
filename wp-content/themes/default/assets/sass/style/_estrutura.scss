@@ -7,11 +7,7 @@ body {
 	min-height: 100vh;
 	//min-width: $width;
 	background: #ffffff;
-	padding-top: 150px;
-
-	&.home, &.single-servicos, &.single-post, &.page {
-		padding-top: 0;
-	}
+	padding-top: 100px;
 
 	&.open {
 		overflow: hidden;

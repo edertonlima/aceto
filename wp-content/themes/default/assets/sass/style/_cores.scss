@@ -1,4 +1,34 @@
 a, .btn {
+
+	&.cor1 {
+		background-color: $cor1;
+		border-color: $cor1;
+
+		&:hover {
+			background-color: darken($cor1, 10%);
+			border-color: darken($cor1, 10%);
+		} 
+
+		&.transparente {
+			color: $cor1;
+			border-color: $cor1;
+
+			i {
+				color: $cor1;
+			}
+
+			&:hover {
+				color: #ffffff;
+				background-color: $cor1;
+
+				i {
+					color: #Ffffff;
+				}
+			}
+		}
+	}
+
+
 	&.cinza-claro {
 		//color: $cinza-claro;
 

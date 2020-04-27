@@ -3,56 +3,70 @@
 		<div class="container">
 			
 			<div class="row">
-				<div class="footer-col">
-					<h4>Contato</h4>
-					<p>
-						Parque Tecnológico Alfa - Rod. José Carlos<br>
-						Daux, 600 - João Paulo / Florianópolis SC<br>
-						88030-000
-					</p>
+				
+				<div class="col-12 content-footer info-footer">
 
-					<p>+55 48 3024.5212</p>
+					<div class="col-footer">
+						<h3 class="cor1">Associação Comercial e Empresarial de Teófilo Otoni</h3>
+					</div>
+					<div class="col-footer">
+						<div class="box-contato">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-contato.jpg">
+							<div>
+								<span>(33) 3522-6677</span>
+								<a href="mailto:aceto@aceto.com.br">aceto@aceto.com.br</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-footer">
+						<div class="box-contato">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-localizacao.jpg">
+							<div>
+								<span>Rua Epaminondas Otoni, 702,<br>1º andar Centro Teófilo Otoni MG</span>
+							</div>
+						</div>
+					</div>
 
-					<p><a href="">comercial@doispraum.com.br</a></p>
+				</div>
 
-					<div class="redes">
-						<a href=""><i class="fab fa-facebook-f"></i></a>
-						<a href=""><i class="fab fa-youtube"></i></a>
-						<a href=""><i class="fab fa-twitter"></i></a>
+				<div class="col-12 border content-footer">
+					<div class="col-6">
+						<div class="diretoria">
+							<h4>Diretoria</h4>
+							<p>
+								<span class="titulo">Presidente:</span>
+								<span>Ricardo Bastos Peres<br>Emex Explosivos</span>
+							</p>
+							<p>
+								<span class="titulo">1º Vice Presidente:</span>
+								<span>Sebastião Ribeiro de Souza - Jhiane</span>
+							</p>
+							<p>
+								<span class="titulo">2º Tesoureiro:</span>
+								<span>Romeci Rodrigues dos Santos - R&R Seviços Contábeis</span>
+							</p>
+							<p>
+								<span class="titulo">Gerente:</span>
+								<span>Mielly Maia - ACETO</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-6 box-vertical img-footer vertical-center">
+						<div class="conteúdo-vertical center">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-footer.jpg">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-footer-2.jpg">
+						</div>		
 					</div>
 				</div>
-			
-				<div class="footer-col">
-					<h4>Últimos posts</h4>
-					<p><a href="">
-						estratégias casadas de importação e terceirização da fabricação no Brasil
-					</a></p>
-
-					<p><a href="">
-						qual momento posso pensar em converter meu produto metálico em plástico
-					</a></p>
-
-					<p><a href="">
-						como posicionar um novo produto no mercado
-					</a></p>
-				</div>
-
-				<div class="footer-col">
-					<h4>Newletter</h4>
-					<p>Inscreva-se em nossa newsletter e receba nosso conteúdo exclusivo</p>
-
-					<form>
-						<fieldset>
-							<input type="text" name="email" placeholder="*Seu e-mail">
-						</fieldset>
-						<button class="btn mini transparente right">receber</button>
-					</form>
+				<div class="col-12 border copy">
+					<p>© 2020 Associação Comercial e Empresarial de Teófilo Otoni.</p>
 				</div>
 			</div>
 
 		</div>
 	</footer>
 
+<?php /*
 	<section class="box-section no-padding" id="demonstracao">
 		<div class="container">
 
@@ -99,6 +113,7 @@
 
 		</div>
 	</section>
+*/ ?>
 
 	<?php wp_footer(); ?>
 
@@ -133,6 +148,7 @@
 			}
 
 
+			$('.footer .img-footer').height($('.footer .diretoria').height());
 		});
 
 		$(window).scroll(function(){
@@ -151,6 +167,9 @@
 			$('.nav').removeClass('open');
 			$('body').removeClass('open');
 			//$('.submenu').removeClass('ativo');
+
+
+			$('.footer .img-footer').height($('.footer .diretoria').height());
 
 		});
 

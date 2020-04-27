@@ -1,8 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage My Web
- * @since My web Site 1.0
+ * @package Ederton
+ * @subpackage Default
+ * @since Default 1.0
  **
  */
 
@@ -53,7 +53,7 @@ function post_type_beneficios() {
 	    'has_archive' => true,
 	    'hierarchical' => false,
 	    'menu_position' => null,
-	    'menu_icon' => 'dashicons-businessperson',
+	    'menu_icon' => 'dashicons-yes-alt',
 	    'supports' => array('title','thumbnail','excerpt')
 	  );
 

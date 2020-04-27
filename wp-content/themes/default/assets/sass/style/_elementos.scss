@@ -8,30 +8,15 @@ strong, .bold {
 
 .logo {
 	float: left;
-	width: 200px;
-	height: 47px;
+	width: 174px;
+	//height: 55px;
 	
 	a {
 		display: block;
-		position: relative;
 
-		span {
-			position: absolute;
+		img {
+			width: 100%;
 			display: block;
-			@include animacao-slow;
-
-			img {
-				width: 100%;
-				display: block;
-			}
-
-			&.branco {
-				opacity: 0;
-			}
-
-			&.vermelho {
-				opacity: 1;
-			}
 		}
 	}
 }
@@ -71,7 +56,7 @@ strong, .bold {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-titulo;
-	font-weight: $light;
+	font-weight: $extra-bold;
 	display: block;
 }
 
@@ -105,13 +90,13 @@ h2 {
 }
 
 h3 {
-	font-size: 2.5rem;
-	line-height: 3rem;
+	font-size: 1.187rem;
+	line-height: 1.5rem;
 }
 
 h4 {
-	font-size: 1.5rem;
-	line-height: 2rem;
+	font-size: 1rem;
+	line-height: 1rem;
 }
 
 h5 {
@@ -125,7 +110,7 @@ h6 {
 p {
 	font-size: $font-size;
 	line-height: $line-height;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 
 	&:last-child {
 		padding-bottom: 0;
@@ -267,17 +252,19 @@ a, button {
 	}
 
 	&.btn {
-		font-weight: $light;
-		border: 1px solid #ffffff;
-		background-color: #ffffff;
-		color: $cor-txt;
+		font-size: .75rem;
+		font-weight: $medium;
+		border: 1px solid $cor-txt;
+		background-color: $cor-txt;
+		color: #ffffff;
 		display: inline-block;
-		border-radius: 15px;
-		padding: 0 20px;
-		height: 30px;
-		line-height: 28px;
+		border-radius: 5px;
+		padding: 0 10px;
+		height: 39px;
+		line-height: 39px;
+		text-transform: uppercase;
 
-		&.extra {
+/*		&.extra {
 			font-size: 2.25rem;
 			height: 60px;
 			line-height: 59px;
@@ -332,27 +319,16 @@ a, button {
 			i {
 
 			}
-		}
+		}*/
 
 		&.transparente {
 			background-color: transparent;
-			color: #ffffff;
+			border-color: $cor-txt;
+			color: $cor-txt;
 
 			&:hover {
-				background-color: #ffffff;
-				color: $cor-txt;
-			}
-
-			&.default {
-				background-color: transparent;
-				color: $cor-txt-claro;
-				border-color: $cor-txt-claro;
-
-				&:hover {
-					background-color: $vermelho;
-					border-color: $vermelho;
-					color: #ffffff;
-				}
+				background-color: $cor-txt;
+				color: #ffffff;
 			}
 		}
 	}

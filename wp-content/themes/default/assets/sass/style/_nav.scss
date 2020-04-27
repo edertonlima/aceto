@@ -1,6 +1,6 @@
 .nav {
-	float: right;
-	margin-top: 18px;
+	float: left;
+	margin: 13px 0 0 15px;
 	//padding-left: 60px;
 	@include animacao-slow;
 
@@ -11,50 +11,84 @@
 		li {
 			display: table-cell;
 			line-height: 30px;
-			padding: 0px 10px;
+			padding: 0px 5px;
 			text-align: center;
 		}
 	}
 
 	a {
-		font-size: .8rem;
+		font-size: 1rem;
 		line-height: 1.125rem;
 		color: $cor-txt;
-		font-weight: $light;
+		font-weight: $regular;
 		padding: 0px 5px;
-		text-transform: uppercase;
 		@include animacao-slow;
 
 		i {
+			font-size: 1.5rem;
 			display: inline-block;
 			color: $cor-txt;
 			position: relative;
+			padding: 0 5px;
+			top: 3px;
 		}
 
 		&:hover, &.ativo {
-			//color: $cor1;
+			color: $cor1;
 
 			i {
-				//color: $cor1;
+				color: $cor1;
 			}
 		}
 	}
 }
 
-.home, .single-servicos, .single-post, .page {
-	.nav {
-		a, a i {
-			color: #ffffff;
+
+.btn-topo {
+	float: right;
+	margin: 7px 0 0 20px;
+
+	.btn {
+		margin: 0 5px;
+	}
+}
+
+.atendimento {
+	float: left;
+	margin: 12px 30px 0;
+
+	i, div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	i {
+		font-size: 32px;
+	}
+
+	div {
+		padding-left: 5px;
+		font-weight: $bold;
+		font-size: .875rem;
+		line-height: 1.25rem;
+		text-transform: uppercase;
+
+		span {
+			display: block;
+			font-size: .65rem;
+			line-height: .65rem;
+			font-weight: $regular;
 		}
 	}
 }
+
 
 
 .header {
 	&.scroll {
 		.nav {
 			a {
-				color: $cor-txt;
+				//color: $cor-txt;
 			}
 		}
 	}

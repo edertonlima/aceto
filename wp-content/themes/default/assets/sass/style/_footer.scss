@@ -1,84 +1,85 @@
 .footer{
-	margin-top: 200px;
-	padding: 80px 0;
-	background-color: $cor1;
+	padding: 50px 0;
 	width: 100%;
 
 	.container-footer {
 		margin: 0 -45px;
 	}
 
-	* {
-		color: #ffffff;
-	}
-
-	.footer-col {
-		float: left;
-		padding-right: $padding-col; 
-		padding-left: $padding-col;
-		width: 36.5%;
-		@include box-sizing;
-
-		&:nth-child(2){
-			width: 27%;
-		}
+	.diretoria {
+		width: 330px;
+		display: block;
+		margin: 0 auto;
 	}
 
 	h4 {
 		margin-bottom: 25px;
+		font-weight: $extra-bold;
 	}
 
-	p {
-		font-size: 1rem;
-		line-height: 1.5rem
+	span, p, a {
+		font-size: .75rem;
+		line-height: 1rem;
+		font-weight: $regular;
 	}
 
-	.redes {
-		a {
-			display: inline-block;
+	span {
+		display: table-cell;
 
-			i {
-				font-size: 1.25rem;
-			}
-
-			&:nth-child(2){
-				margin: 0 45px;
-			}
+		&.titulo {
+			font-weight: $medium;
+			padding-right: 15px;
 		}
 	}
 
-	form {
-		padding: 0;
+	h4, .titulo {
+		width: 110px;
+		text-align: right;
+	}
 
-		input {
-			color: #ffffff;
-			//font-size: 1rem;
-			//line-height: 1.5rem;
-			border-color: #ffffff;
-	
-			@include placeholder{
-				opacity: 1;
-				font-size: 1rem;
-				color: #ffffff;
-			}
-		}
+	.content-footer {
+		padding-top: 60px; 
+		padding-bottom: 60px; 
+	}
 
-		fieldset {
-			margin: 0;
-		}
+	.border {
+		border-top: 1px solid #ebebef;
 
-		.btn {
-			margin-top: 15px;
-			/*height: 28px;
-			line-height: 27px;
-			padding: 0 28px;
-			font-size: 1rem;*/
+		&.copy {
+			padding-top: 25px; 
+			padding-bottom: 25px; 
 		}
 	}
-}
 
-.home {
-	.footer {
-		margin: 0;
+	.info-footer {
+		text-align: center;
+	}
+
+	.col-footer {
+		max-width: 33.333%;
+		display: inline-block;
+		text-align: left;
+		float: none;
+	}
+
+	.box-contato {
+		position: relative;
+
+		div {
+			padding-left: 50px;
+		}
+
+		img {
+			width: 38px;
+			position: absolute;
+			left: 0px;
+			top: 0;
+		}
+
+		span, a {
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-weight: $light;
+		}
 	}
 }

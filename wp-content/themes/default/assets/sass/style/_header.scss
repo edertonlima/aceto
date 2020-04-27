@@ -6,9 +6,14 @@
 	z-index: 999;
 	padding: 20px 0;
 	background-color: #ffffff;
+	box-shadow: 0px 0px 10px #e5e5e5;
 	@include animacao-slow;
+	@include box-sizing;
 }
 
+
+
+/*
 .home, .single-servicos, .single-post, .page {
 	.header {
 		padding: 40px 0;
@@ -20,6 +25,7 @@
 		}
 	}
 }
+*/
 
 .breadcrumbs {
 

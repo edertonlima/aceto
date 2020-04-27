@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-<?php while ( have_posts() ) : the_post(); ?>
+
+<?php /* while ( have_posts() ) : the_post(); ?>
 	
 	<?php if(!get_field('video-slide')){
 		$banner_image = get_field('imagem-slide');
@@ -20,7 +21,7 @@
 					
 					<div class="box-destaque">
 						<span class="titulo">
-							<?php /* <span class="super">+</span>150 Produtos */ ?>
+							<?php /* <span class="super">+</span>150 Produtos * ?>
 							<?php the_field('titulo-slide'); ?>
 						</span>
 
@@ -138,11 +139,11 @@
 		</div>
 	</section>
 
-<?php endwhile; ?>
+<?php endwhile; */?>
 <?php get_footer(); ?>
 
 <script type="text/javascript">
-	<?php if(get_field('video-slide')){ ?>
+	<?php /*if(get_field('video-slide')){ ?>
 
 		//$(document).ready(function(){
 			video_width = ($('.video-slide').width())/2.333333;
@@ -156,11 +157,11 @@
 			$('.video-slide video').height(video_width);
 		});
 
-	<?php } ?>
+	<?php }*/ ?>
 
 
 
-
+/*
 	proj_height = $('.projetos .col-4:first-child').width();
 	$('.projetos .article').height(proj_height);
 
@@ -168,4 +169,5 @@
 		proj_height = $('.projetos .col-4:first-child').width();
 		$('.projetos .article').height(proj_height);
 	});
+	*/
 </script>
