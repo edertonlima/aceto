@@ -1,9 +1,8 @@
-$height_input: 30px;
+$height_input: 39px;
 
 form {
 	margin: 0 auto;
-	padding: 0 100px;
-	max-width: 840px;
+	padding: 0px;
 	width: 100%;
 	@include box-sizing;
 	@include clear();
@@ -12,7 +11,7 @@ form {
 		font-style: italic;
 		max-width: 100%;
 		width: 100%;
-		font-size: $font-size;
+		font-size: .85rem;
 		color: $cor-txt;
 		font-weight: $light;
 		line-height: $height_input;
@@ -30,7 +29,6 @@ form {
 	}
 
 	input[type='text'], input[type='email'], input[type='password'] {
-		font-size: $font-size;
 		line-height: $height_input;	
 	}
 
@@ -79,9 +77,14 @@ form {
 		}
 	}
 
-	&.contato, &.demonstracao {
-		padding: 0 110px;
-		margin: 30px 0 0;
+	&.associe-se {
+		margin: 30px -15px 0;
+	}
+
+	&.contato {
+		border-radius: 10px;
+		background-color: rgba(74, 132, 67, 0.1);
+		padding: 45px;
 	}
 }
 

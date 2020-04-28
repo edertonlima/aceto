@@ -61,46 +61,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 4.6875rem;
-	line-height: 4.25rem;
-	margin-bottom: 80px;
+	font-size: 3rem;
+	line-height: 3rem;
 }
 
 h2 {
-	font-size: 2.9375rem;
-	line-height: 3.5rem;
+	font-size: 1.875rem;
+	line-height: 2rem;
+	margin-bottom: 40px;
 
-	&.titulo {
-		margin-bottom: 80px;
-	}
-
-	&.titulo-form {
-		margin-bottom: 40px;
-	}
-
-	&.ico-titulo {
-		color: $cor-txt-claro;
-		font-size: 1.5rem;
-		background: url("../images/ico-processos.png") no-repeat left top;
-		padding-left: 55px;
-		line-height: 50px;
-		margin-bottom: 20px;
-		font-weight: $regular;
+	&.center {
+		max-width: 550px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 h3 {
-	font-size: 1.187rem;
+	font-size: 1.125rem;
 	line-height: 1.5rem;
+	font-weight: $bold;
 }
 
 h4 {
-	font-size: 1rem;
-	line-height: 1rem;
+	font-size: 1.125rem;
+	line-height: 1.125rem;
+	text-transform: uppercase;
+	font-weight: $bold;
+	margin-bottom: 15px;
 }
 
 h5 {
-
+	font-size: 1rem;
+	line-height: 1rem;
 }
 
 h6 {
@@ -264,22 +257,25 @@ a, button {
 		line-height: 39px;
 		text-transform: uppercase;
 
-/*		&.extra {
-			font-size: 2.25rem;
-			height: 60px;
-			line-height: 59px;
-			padding: 0 25px;
-			border-width: 2px;
+		&.extra {
+			font-size: 0.9375rem;
+			height: 50px;
+			line-height: 50px;
+			padding: 0 30px;
 
-			&.load-more {
+			/*&.load-more {
 				line-height: 56px;
 
 				i {
 					font-size: 1.75rem;
 				}
-			}
+			}*/
 		}
 
+		&.small {
+			padding: 0 40px;
+		}
+/*
 		&.mini {
 			//font-size: 2.25rem;
 			height: 35px;

@@ -1,7 +1,7 @@
 <nav class="nav">
 	<ul>
 		<li>
-			<a href="<?php echo get_home_url(); ?>/sobre" title="Clientes">Sobre</a>
+			<a href="<?php echo get_home_url(); ?>/sobre" title="Sobre">Sobre</a>
 		</li>
 
 		<li>

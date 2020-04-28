@@ -4,7 +4,8 @@
 			
 			<div class="row">
 				
-				<div class="col-12 content-footer info-footer">
+				<?php if(!is_page('fale-conosco')){ ?>
+				<div class="col-12 content-footer info-footer <?php if(is_home()){ echo 'border'; } ?>">
 
 					<div class="col-footer">
 						<h3 class="cor1">Associação Comercial e Empresarial de Teófilo Otoni</h3>
@@ -28,11 +29,12 @@
 					</div>
 
 				</div>
+			<?php } ?>
 
 				<div class="col-12 border content-footer">
 					<div class="col-6">
 						<div class="diretoria">
-							<h4>Diretoria</h4>
+							<h5>Diretoria</h5>
 							<p>
 								<span class="titulo">Presidente:</span>
 								<span>Ricardo Bastos Peres<br>Emex Explosivos</span>

@@ -1,4 +1,4 @@
-.slide {
+/*.slide {
 	width: 100%;
 	height: $hSlide;
 
@@ -195,6 +195,105 @@
 	&.slide-quienes-somos {
 		.mask-slide {
 			opacity: .75;
+		}
+	}
+}*/
+
+
+.mask-banner-home {
+	position: absolute;
+	width: 100%;
+	height: calc(100vh - 95px);
+	max-height: 760px;
+	z-index: 1;
+	background-image: url("../images/mask-slide.png");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: rgba($cor1,.2);
+
+	.clip-svg {
+		clip-path: url(#myClip);
+	}
+
+}
+
+
+.owl-theme {
+	.owl-nav {
+
+		&.disabled {
+			display: none;
+		}
+
+	}
+
+
+	.owl-dots {
+		.owl-dot {
+
+		}
+	}
+}
+
+
+/* thema */
+.owl-theme {
+	.owl-nav {
+
+	}
+
+	.owl-dots {
+		bottom: 0px;
+		position: absolute;
+		left: 0;
+		height: 0;
+		text-align: center;
+		width: 100%;
+
+		.owl-dot {
+			border-radius: 12px;
+			margin: 0 5px;
+			width: 12px;
+			height: 12px;
+			border: 2px solid $cor1;
+			background-color: transparent;
+
+			span {
+				display: none;
+			}
+
+			&.active {
+				border-color: $cor2;
+				background-color: $cor2;
+				//border-radius: 25%;
+				width: 23px;
+			}
+		}
+	}
+
+	&.owl-full-height {
+
+		.owl-dots {
+			bottom: 40px;
+		}
+
+	}
+
+	&.carousel-beneficios {
+		.owl-stage-outer {
+			padding: 65px;
+			width: 100%;
+			margin: 0 -65px;
+
+			.owl-item {
+				opacity: 0;
+				@include animacao-slow;
+
+				&.active {
+					opacity: 1;
+				}
+			}
 		}
 	}
 }

@@ -17,6 +17,10 @@ a, .btn {
 				color: $cor1;
 			}
 
+			&.color-cor-txt {
+				color: $cor-txt;
+			}
+
 			&:hover {
 				color: #ffffff;
 				background-color: $cor1;
@@ -24,6 +28,19 @@ a, .btn {
 				i {
 					color: #Ffffff;
 				}
+			}
+		}
+
+		&.inline {
+			color: $cor1;
+			border: none;
+			padding: 0;
+			height: auto;
+			line-height: normal;
+			background: transparent;
+
+			&:hover {
+				color: darken($cor1, 10%);
 			}
 		}
 	}
@@ -220,4 +237,8 @@ a, .btn {
 
 .verde-claro {
 	color: $verde-claro;
+}
+
+.color-cor-txt {
+	color: $cor-txt;
 }

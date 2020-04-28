@@ -7,7 +7,7 @@ body {
 	min-height: 100vh;
 	//min-width: $width;
 	background: #ffffff;
-	padding-top: 100px;
+	padding-top: 95px;
 
 	&.open {
 		overflow: hidden;
@@ -93,7 +93,7 @@ body * {
 	@include box-sizing;
 	width: 100%;
 	position: relative;
-	padding: 80px 0 0;
+	padding: 100px 0 0;
 
 	&.margin-top {
 		margin-top: 80px;
@@ -107,25 +107,34 @@ body * {
 				}
 			}
 		}
+
+		&.flex {
+			display: flex;
+
+			[class*="col-"] {
+				display: flex;
+			}
+		}
 	}
 
 	.conteudo {
-		//width: 100%;
-		max-width: 780px;
-		padding: 15px 0 15px 55px;
-		margin: 0px 0 0 55px;
-		border-left: 1px solid $cor-txt;
+		width: 100%;
+		padding: 0px;
+		margin: 0px;
 		display: block;
-		text-align: justify;
-		overflow-wrap: break-word;
-		word-wrap: break-word;
-		-webkit-hyphens: auto;
-		-ms-hyphens: auto;
-		hyphens: auto;
-		hyphenate-limit-chars: 10 4 4;		
-		-webkit-hyphenate-limit-chars: 10 4 4;
-		-ms-hyphenate-limit-chars: 10 4 4;
-		
+
+		&.justify {
+			text-align: justify;
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			-webkit-hyphens: auto;
+			-ms-hyphens: auto;
+			hyphens: auto;
+			hyphenate-limit-chars: 10 4 4;		
+			-webkit-hyphenate-limit-chars: 10 4 4;
+			-ms-hyphenate-limit-chars: 10 4 4;
+		}
+
 		@include box-sizing;
 
 		&.cont-destaque {
@@ -149,8 +158,28 @@ body * {
 			}
 		}
 
-		ul {
+		ul, ul.cont-list {
+			li {
+				display: block;
+				margin-top: 30px;
+				padding-left: 40px;
+				position: relative;
 
+				i {
+					font-size: 23px;
+					color: $cor1;
+					position: absolute;
+					left: 0;
+				}
+
+				span {
+					font-family: $font-titulo;
+					font-weight: $bold;
+					display: block;
+					font-size: 1.125rem;
+					line-height: 1.25rem;
+				}
+			}
 		}
 
 		p {
@@ -213,7 +242,8 @@ body * {
 
 .full-height {
 	.container {
-		height: 100vh;
+		height: calc(100vh - 95px);
+		max-height: 760px;
 	}
 }
 
@@ -225,7 +255,12 @@ body * {
 }
 
 .bg-imagem {
-	@include cover;
+	//@include cover;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center right;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .parallax {
@@ -272,4 +307,11 @@ body * {
 			vertical-align: bottom;
 		}
 	}
+}
+
+
+
+.z-index-10 {
+	position: relative;
+	z-index: 10;
 }
