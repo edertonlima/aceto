@@ -4695,7 +4695,7 @@ body * {
 .container {
   max-width: 1220px;
   width: 100%;
-  padding: 0 45px;
+  padding: 0 25px;
   margin: 0 auto;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -4874,19 +4874,22 @@ body * {
         line-height: 2.25rem; }
       .box-section .conteudo blockquote ~ p {
         padding-top: 15px; }
-  .box-section .conteudo-post img {
-    width: 100%; }
-  .box-section .conteudo-post .margin-top {
-    margin-top: 80px; }
-  .box-section .conteudo-post .margin-top-2x {
-    margin-top: 160px; }
-
-.single-post .box-section .conteudo {
-  max-width: 100%;
-  display: table-cell;
-  vertical-align: top; }
-  .single-post .box-section .conteudo iframe {
-    max-width: 100%; }
+  .box-section .conteudo-post {
+    max-width: 1000px;
+    margin: 30px auto; }
+    .box-section .conteudo-post img {
+      width: 100%; }
+      .box-section .conteudo-post img.destaque {
+        margin: 30px auto;
+        display: block;
+        border-radius: 10px;
+        overflow: hidden; }
+    .box-section .conteudo-post .content {
+      padding: 0 50px; }
+    .box-section .conteudo-post .margin-top {
+      margin-top: 80px; }
+    .box-section .conteudo-post .margin-top-2x {
+      margin-top: 160px; }
 
 .full-height .container {
   height: calc(100vh - 95px);
@@ -4969,6 +4972,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3rem;
   line-height: 3rem; }
+  h1.center {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto; }
 
 h2 {
   font-size: 1.875rem;
@@ -5001,6 +5008,9 @@ p {
   padding-bottom: 15px; }
   p:last-child {
     padding-bottom: 0; }
+  p.resumo {
+    max-width: 800px;
+    margin: 0 auto; }
 
 .justify-center {
   text-align: justify;
@@ -5908,8 +5918,9 @@ button, input[type='submit'], .button {
   background-color: rgba(74, 132, 67, 0.1);
   padding: 45px 0 40px; }
   .breadcrumbs h1 {
-    margin: 0;
-    text-align: center; }
+    margin: 0 auto 5px;
+    text-align: center;
+    max-width: 800px; }
   .breadcrumbs:not(.margin-top) {
     padding-top: 30px; }
   .breadcrumbs ul {
@@ -7265,12 +7276,106 @@ a.cinza-claro.transparente, .btn.cinza-claro.transparente {
     width: 100%;
     display: block;
     margin-bottom: 20px; }
-  .blog.list-blog span {
-    font-size: .65‬rem;
-    font-weight: 300;
-    font-family: "Nunito", sans-serif; }
   .blog.list-blog h3 {
     margin-top: 5px; }
+
+.blog .data {
+  font-size: .85rem;
+  font-weight: 300;
+  font-family: "Nunito", sans-serif; }
+
+.blog.detalhe-blog .data {
+  margin: 0 auto 10px;
+  display: block;
+  text-align: center;
+  font-weight: 700; }
+
+.blog.detalhe-blog .autor, .blog.detalhe-blog .fonte {
+  font-size: 1rem;
+  display: block;
+  font-weight: 500; }
+
+.blog.detalhe-blog .autor {
+  margin: 30px 0; }
+
+.blog.detalhe-blog .fonte {
+  margin-top: 30px; }
+
+.beneficios .beneficios-links {
+  display: block;
+  width: 100%;
+  text-align: center; }
+  .beneficios .beneficios-links li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 1px; }
+    .beneficios .beneficios-links li .link-content {
+      display: table-cell;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgba(74, 132, 67, 0.1);
+      width: 130px;
+      height: 85px;
+      vertical-align: middle;
+      text-align: center;
+      cursor: pointer;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      .beneficios .beneficios-links li .link-content span {
+        font-size: 1.125rem;
+        font-weight: 400;
+        font-family: "Nunito", sans-serif; }
+    .beneficios .beneficios-links li:hover .link-content {
+      background-color: rgba(74, 132, 67, 0.15); }
+      .beneficios .beneficios-links li:hover .link-content span {
+        color: #4a8443; }
+    .beneficios .beneficios-links li.on .link-content {
+      width: auto;
+      height: 110px;
+      padding: 10px 20px;
+      background-color: #4a8443;
+      position: relative;
+      cursor: default; }
+      .beneficios .beneficios-links li.on .link-content:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #4a8443;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        margin-left: -20px; }
+      .beneficios .beneficios-links li.on .link-content span {
+        width: 150px;
+        display: block;
+        color: #ffffff;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 700; }
+
+.beneficios .beneficios-conteudo {
+  margin-top: 50px;
+  position: relative; }
+  .beneficios .beneficios-conteudo .beneficios-item {
+    opacity: 0;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    -moz-transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s; }
+    .beneficios .beneficios-conteudo .beneficios-item img {
+      width: 100px;
+      position: absolute;
+      right: 20px;
+      top: 20px; }
+    .beneficios .beneficios-conteudo .beneficios-item.on {
+      position: relative;
+      opacity: 1; }
 
 @media all and (max-width: 1300px) {
   .home .header, .single-servicos .header, .single-post .header, .page .header {

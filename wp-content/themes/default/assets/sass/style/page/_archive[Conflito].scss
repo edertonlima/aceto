@@ -13,37 +13,14 @@
 			margin-bottom: 20px;
 		}
 
+		span {
+			font-size: .65‬rem;
+			font-weight: $light;
+			font-family: $font-titulo;
+		}
+
 		h3 {
 			margin-top: 5px;
-		}
-	}
-
-	.data {
-		font-size: .85rem;
-		font-weight: $light;
-		font-family: $font-titulo;
-	}
-
-	&.detalhe-blog {
-		.data {
-			margin: 0 auto 10px;
-			display: block;
-			text-align: center;
-			font-weight: $bold;
-		}
-
-		.autor, .fonte {
-			font-size: 1rem;
-			display: block;
-			font-weight: $medium;
-		}
-
-		.autor {
-			margin: 30px 0;
-		}
-
-		.fonte {
-			margin-top: 30px;
 		}
 	}
 }
@@ -140,11 +117,15 @@
 			width: 100%;
 			@include animacao;
 
-			img {
-				width: 100px;
-				position: absolute;
-				right: 20px;
-				top: 20px;
+			.bg-imagem {
+				position: relative;
+
+				img {
+					width: 100px;
+					position: absolute;
+					right: 20px;
+					top: 20px;
+				}
 			}
 
 			&.on {

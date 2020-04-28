@@ -177,7 +177,7 @@
 				<div class="col-4">
 					
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-1.jpg" class="" />
-					<span>11 de Agosto de 2018</span>
+					<span class="data">11 de Agosto de 2018</span>
 					<h3>Situação do país piorou para 72% da população, aponta Datafolha</h3>
 					<a href="" class="btn inline cor1 margin-top-30" title="leia mais">leia mais</a>
 
@@ -186,7 +186,7 @@
 				<div class="col-4">
 					
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-2.jpg" class="" />
-					<span>11 de Agosto de 2018</span>
+					<span class="data">11 de Agosto de 2018</span>
 					<h3>Situação do país piorou para 72% da população, aponta Datafolha</h3>
 					<a href="" class="btn inline cor1 margin-top-30" title="leia mais">leia mais</a>
 
@@ -195,7 +195,7 @@
 				<div class="col-4">
 					
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-3.jpg" class="" />
-					<span>11 de Agosto de 2018</span>
+					<span class="data">11 de Agosto de 2018</span>
 					<h3>Situação do país piorou para 72% da população, aponta Datafolha</h3>
 					<a href="" class="btn inline cor1 margin-top-30" title="leia mais">leia mais</a>
 

@@ -208,8 +208,22 @@ body * {
 	}
 
 	.conteudo-post {
+		max-width: 1000px;
+		margin: 30px auto;
+
 		img {
 			width: 100%;
+
+			&.destaque {
+				margin: 30px auto;
+				display: block;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+		}
+
+		.content {
+			padding: 0 50px;
 		}
 
 		.conteudo {
@@ -226,19 +240,6 @@ body * {
 	}
 }
 
-.single-post {
-	.box-section {
-		.conteudo {
-			max-width: 100%;
-			display: table-cell;
-			vertical-align: top;
-
-			iframe {
-				max-width: 100%;
-			}
-		}
-	}
-}
 
 .full-height {
 	.container {

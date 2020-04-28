@@ -63,6 +63,12 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 3rem;
 	line-height: 3rem;
+
+	&.center {
+		max-width: 550px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 h2 {
@@ -107,6 +113,11 @@ p {
 
 	&:last-child {
 		padding-bottom: 0;
+	}
+
+	&.resumo {
+		max-width: 800px;
+		margin: 0 auto;
 	}
 }
 
