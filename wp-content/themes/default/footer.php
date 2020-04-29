@@ -135,18 +135,28 @@
 
 			// MENU MOBILE
 			widthWindow = $(window).width();
-			if(widthWindow < 980){
+			if(widthWindow < 900){
 				$('.menu-mobile').click(function(){
 					//$('.submenu').removeClass('ativo');
 
 					$(this).toggleClass('open');
 					$('.nav').toggleClass('open');
 					$('body').toggleClass('open');
+					$('.btn-topo').toggleClass('open');
+					$('.atendimento').toggleClass('open');
+					
 				});
 
 				/*$('.btn-menu-mobile').click(function(){
 					$(this).parent().toggleClass('ativo');
 				});*/
+			}else{
+
+				$('.menu-mobile').click(function(){
+					$(this).toggleClass('open');
+					$('.btn-topo').toggleClass('open');
+					$('body').toggleClass('open');
+				});
 			}
 
 
@@ -168,6 +178,8 @@
 			$('.menu-mobile').removeClass('open');
 			$('.nav').removeClass('open');
 			$('body').removeClass('open');
+			$('.btn-topo').removeClass('open');
+			$('.atendimento').removeClass('open');
 			//$('.submenu').removeClass('ativo');
 
 

@@ -42,7 +42,7 @@
 				<ul class="beneficios-links">
 					<li class="on" var-cont="1">
 						<div class="link-content">
-							<span style="width: 150px;">UNIMED</span>		
+							<span style="/*width: 150px;*/">UNIMED</span>		
 						</div>
 					</li>
 					<li class="" var-cont="2">
@@ -101,7 +101,7 @@
 									<p>Com este convênio a UNIMED disponibiliza assistência médico-hospitalar para os nossos associados, através de sua rede de atendimento que conta, só na região com 324 médicos cooperados nas mais diversas especialidades, além de uma completa rede de hospitais, clínicas e serviços credenciados, tudo isso é claro com descontos significativos nas mensalidades conveniadas.</p>
 
 									<h3 class="cor1">Entre em contato com agente<br>e saiba mais</h3>
-									<a href="<?php echo get_home_url(); ?>/fale-conosco" target="" class="btn small transparente cor1 margin-top-30 color-cor-txt" title="ver todos">ver todos</a>
+									<a href="<?php echo get_home_url(); ?>/fale-conosco" target="" class="btn small transparente cor1 margin-top-30 color-cor-txt" title="ver todos">Enviar mensagem</a>
 								</div>
 							</div>
 						</div>
@@ -124,7 +124,7 @@
 									<p>Com este convênio a UNIMED disponibiliza assistência médico-hospitalar para os nossos associados, através de sua rede de atendimento que conta, só na região com 324 médicos cooperados nas mais diversas especialidades, além de uma completa rede de hospitais, clínicas e serviços credenciados, tudo isso é claro com descontos significativos nas mensalidades conveniadas.</p>
 
 									<h3 class="cor1">Entre em contato com agente<br>e saiba mais</h3>
-									<a href="<?php echo get_home_url(); ?>/fale-conosco" target="" class="btn small transparente cor1 margin-top-30 color-cor-txt" title="ver todos">ver todos</a>
+									<a href="<?php echo get_home_url(); ?>/fale-conosco" target="" class="btn small transparente cor1 margin-top-30 color-cor-txt" title="Enviar mensagem">Enviar mensagem</a>
 								</div>
 							</div>
 						</div>
@@ -147,7 +147,7 @@
 									<p>Com este convênio a UNIMED disponibiliza assistência médico-hospitalar para os nossos associados, através de sua rede de atendimento que conta, só na região com 324 médicos cooperados nas mais diversas especialidades, além de uma completa rede de hospitais, clínicas e serviços credenciados, tudo isso é claro com descontos significativos nas mensalidades conveniadas.</p>
 
 									<h3 class="cor1">Entre em contato com agente<br>e saiba mais</h3>
-									<a href="<?php echo get_home_url(); ?>/fale-conosco" target="" class="btn small transparente cor1 margin-top-30 color-cor-txt" title="ver todos">ver todos</a>
+									<a href="<?php echo get_home_url(); ?>/fale-conosco" target="" class="btn small transparente cor1 margin-top-30 color-cor-txt" title="Enviar mensagem">Enviar mensagem</a>
 								</div>
 							</div>
 						</div>
@@ -171,7 +171,7 @@
 
 		$('.beneficios-links li').removeClass('on');
 		$(this).addClass('on');
-		$('span',this).width(150);
+		//$('span',this).width(150);
 
 		id = $(this).attr('var-cont');
 		$('.beneficios-item').removeClass('on');

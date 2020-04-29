@@ -230,6 +230,10 @@
 
 
 	.owl-dots {
+
+		&.disabled {
+			display: none;
+		}
 		.owl-dot {
 
 		}

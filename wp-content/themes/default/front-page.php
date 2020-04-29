@@ -66,7 +66,7 @@
 
 
 
-	<section class="box-section no-padding">
+	<section class="box-section slide-beneficios overflow-x">
 		<div class="container">
 
 			<div class="row">
@@ -108,7 +108,7 @@
 
 
 
-	<section class="box-section">
+	<section class="box-section exponor">
 		<div class="container">
 
 			<div class="row">
@@ -173,8 +173,13 @@
 				</div>
 			</div>
 
-			<div class="row blog list-blog">
-				<div class="col-4">
+			<div class="blog list-blog">
+
+					<div class="carousel-blog owl-carousel owl-theme owl-loaded">
+						<div class="owl-stage-outer">
+							<div class="owl-stage flex">
+
+				<div class="owl-item">
 					
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-1.jpg" class="" />
 					<span class="data">11 de Agosto de 2018</span>
@@ -183,7 +188,7 @@
 
 				</div>
 
-				<div class="col-4">
+				<div class="owl-item">
 					
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-2.jpg" class="" />
 					<span class="data">11 de Agosto de 2018</span>
@@ -192,7 +197,7 @@
 
 				</div>
 
-				<div class="col-4">
+				<div class="owl-item">
 					
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-3.jpg" class="" />
 					<span class="data">11 de Agosto de 2018</span>
@@ -200,11 +205,16 @@
 					<a href="" class="btn inline cor1 margin-top-30" title="leia mais">leia mais</a>
 
 				</div>
+
+							</div>
+						</div>
+					</div>
+
 			</div>
 
 			<div class="row">
 				<div class="row center">
-					<a href="<?php echo get_home_url(); ?>/blog" target="" class="btn small transparente cor1 margin-top-30 color-cor-txt" title="ver todos">ver todos</a>
+					<a href="<?php echo get_home_url(); ?>/blog" target="" class="btn small transparente cor1 margin-top-60 color-cor-txt" title="ver todos">ver todos</a>
 				</div>
 			</div>
 
@@ -212,92 +222,7 @@
 	</section>
 
 
-	<section class="box-section">
-
-		<div class="banner-full-50" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/img-associase.jpg')">
-
-		</div>
-
-		<div class="container">
-
-			<div class="row">
-				<div class="col-6 banner-full-txt">
-			
-			<div class="box-vertical vertical-center">
-				<div class="conteúdo-vertical">
-					
-					<div class="box-destaque">
-
-						<span class="titulo">
-							Já conhece todos os benefícios?
-						</span>
-
-						<a href="" class="btn extra cor1">conhecer</a>
-					</div>
-				</div>
-			</div>
-
-				</div>
-
-				<div class="col-6 banner-full-height">
-					
-					<div class="conteudo">
-						<h4>Associe-se</h4>
-						<h2 class="cor1">Associe-se e venha fazer parte desse grupo repleto de benefícios!</h2>
-
-						<div class="dados-info list-dados-info">
-							<div class="info-item">							
-								<div class="info-table">
-									<span class="info-num">1200<span>+</span></span>
-									<span class="info-legenda">associados</span>
-								</div>
-							</div>
-
-							<div class="info-item">							
-								<div class="info-table">
-									<span class="info-num">12<span>+</span></span>
-									<span class="info-legenda">convênios</span>
-								</div>
-							</div>
-
-							<div class="info-item">							
-								<div class="info-table">
-									<span class="info-num">60<span>+</span></span>
-									<span class="info-legenda">cursos e palestras</span>
-								</div>
-							</div>
-						</div>
-
-						<p class="margin-top-30">Preencha abaixo com seus dados que entraremos em contato com você o mais rápido possível.</p>
-					</div>
-
-					<form action="" class="associe-se">
-						<fieldset class="col-6">
-							<input type="text" placeholder="Seu Nome">
-						</fieldset>
-
-						<fieldset class="col-6">
-							<input type="text" placeholder="E-mail">
-						</fieldset>
-
-						<fieldset class="col-6">
-							<input type="text" placeholder="Telefone">
-						</fieldset>
-
-						<fieldset class="col-6">
-							<input type="text" placeholder="Nome da Empresa">
-						</fieldset>
-
-						<fieldset class="col-12">
-							<button type="submit" class="btn transparente small cor1 margin-top-20 color-cor-txt">enviar</button>
-						</fieldset>
-					</form>
-
-				</div>
-			</div>
-
-		</div>
-	</section>
+	<?php get_template_part( 'associese' ); ?>
 
 
 	<?php /*
@@ -456,8 +381,39 @@
 					items:1
 				},
 
-				480:{
+				580:{
+					items:2
+				},
+
+				800:{
+					items:3
+				},
+
+				1000:{
 					items:4
+				}
+			}
+		})
+
+		$('.carousel-blog').owlCarousel({
+			loop:false,
+			margin:35,
+			responsiveClass:true,
+			nav:false,
+
+			//navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+			//rtl:true,
+			responsive:{
+				0:{
+					items:1
+				},
+
+				480:{
+					items:2
+				},
+
+				900:{
+					items:3
 				}
 			}
 		})

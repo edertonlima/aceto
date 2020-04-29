@@ -1,6 +1,6 @@
 .nav {
 	float: left;
-	margin: 13px 0 0 15px;
+	margin: 13px 0 0 30px;
 	//padding-left: 60px;
 	@include animacao-slow;
 
@@ -47,6 +47,7 @@
 .btn-topo {
 	float: right;
 	margin: 7px 0 0 20px;
+	@include animacao-slow;
 
 	.btn {
 		margin: 0 5px;
@@ -55,7 +56,7 @@
 
 .atendimento {
 	float: left;
-	margin: 12px 30px 0;
+	margin: 12px 40px 0;
 
 	i, div {
 		display: table-cell;
@@ -67,7 +68,7 @@
 	}
 
 	div {
-		padding-left: 5px;
+		padding-left: 8px;
 		font-weight: $bold;
 		font-size: .875rem;
 		line-height: 1.25rem;
@@ -103,7 +104,8 @@
 	position: fixed;
 	right: 47px;
 	margin: 0;
-	top: 27px;
+	top: 31px;
+	z-index: 999;
 	@include clear;
 
 	&.open {
@@ -152,27 +154,6 @@
 	}
 }
 
-.home, .single-servicos, .single-post, .page {
-	#nav-icon2 span {
-		background: #ffffff;
-	}
-}
-
-.header {
-	&.scroll {
-		#nav-icon2 {
-			span {
-				background: $cor1;
-			}
-
-			&.open {
-				span {
-					background: #ffffff;
-				}
-			}
-		}
-	}
-}
 
 #nav-icon2 span:nth-child(even) {
   left: 50%;

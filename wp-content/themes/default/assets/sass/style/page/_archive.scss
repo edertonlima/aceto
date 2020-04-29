@@ -140,6 +140,10 @@
 			width: 100%;
 			@include animacao;
 
+			.bg-imagem {
+				position: relative;
+			}
+
 			img {
 				width: 100px;
 				position: absolute;

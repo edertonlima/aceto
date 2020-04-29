@@ -8,6 +8,7 @@ body {
 	//min-width: $width;
 	background: #ffffff;
 	padding-top: 95px;
+	//overflow-x: hidden;
 
 	&.open {
 		overflow: hidden;
@@ -88,12 +89,20 @@ body * {
 	}
 }
 
-.box-section {
+.box-section { //display: none;
 	@include clear;
 	@include box-sizing;
 	width: 100%;
 	position: relative;
 	padding: 100px 0 0;
+	
+	&.overflow-x {
+		overflow-x: hidden;
+	}
+
+	&.slide-beneficios {
+		padding: 0 0 25px;
+	}
 
 	&.margin-top {
 		margin-top: 80px;
@@ -255,13 +264,23 @@ body * {
 	}
 }
 
+
+
 .bg-imagem {
 	//@include cover;
 	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+
+	&:not(.box-section){
+		border-radius: 10px;
+	}
+}
+
+.carousel-banner .full-height.bg-imagem {
 	background-size: auto 100%;
 	background-position: center right;
-	border-radius: 10px;
-	overflow: hidden;
 }
 
 .parallax {
