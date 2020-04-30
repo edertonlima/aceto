@@ -48,20 +48,23 @@
 */ ?>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<?php /*
+<link rel="shortcut icon" href="<?php the_field('favcon', 'option'); ?>" type="image/x-icon" />
+<link rel="icon" href="<?php the_field('favcon', 'option'); ?>" type="image/x-icon" />
 
-<link rel="shortcut icon" href="<?php the_field('favicon', 'option'); ?>" type="image/x-icon" />
-<link rel="icon" href="<?php the_field('favicon', 'option'); ?>" type="image/x-icon" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="content-language" content="pt" />
 <meta name="rating" content="General" />
+<?php /*
 <meta name="description" content="<?php echo $descricao; ?>" />
-<meta name="keywords" content="" />
-<meta name="robots" content="index,follow" />
-<meta name="author" content="<?php echo $autor; ?>" />
+<meta name="keywords" content="" /> */ ?>
 <meta name="language" content="pt-br" />
-<meta name="title" content="<?php echo $titulo; ?>" />
-
+<meta name="robots" content="index,follow" />
+<?php /*
+<meta name="author" content="<?php echo $autor; ?>" />
+*/ ?>
+<meta name="title" content="<?php echo get_bloginfo( 'name' ); ?><?php //echo $titulo; ?>" />
+<?php /*
 <!-- SOCIAL META -->
 <meta itemprop="name" content="<?php echo $titulo; ?>" />
 <meta itemprop="description" content="<?php echo $descricao; ?>" />
@@ -88,8 +91,9 @@
 <meta name="twitter:image" content="<?php echo $imagem; ?>" />
 <!-- SOCIAL META -->
 
-<title><?php echo $titulo; ?></title>
 */ ?>
+<title><?php echo get_bloginfo( 'name' ); ?><?php //echo $titulo; ?></title>
+
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" media="screen" />
@@ -181,8 +185,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");*/
 
 			*/ ?>
 			<div class="logo">
-				<a href="<?php echo get_home_url(); ?>" title="">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-aceto.jpg">
+				<a href="<?php echo get_home_url(); ?>" title="<?php echo get_bloginfo( 'name' ); ?>">
+					<img src="<?php the_field('logo', 'option'); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
 				</a>
 			</div>
 			<?php get_template_part( 'nav' ); ?>

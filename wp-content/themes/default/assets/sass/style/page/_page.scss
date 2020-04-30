@@ -57,6 +57,7 @@
 
 .block-item {
 	//margin: 70px 0;
+	display: block;
 	padding: 35px;
 	box-shadow: 12px 19px 62px 0 rgba(13,52,79,.07);
 	border-radius: 10px;
@@ -72,6 +73,7 @@
 		font-size: 1.625rem;
 		line-height: 1.625rem;
 		margin-bottom: 30px;
+		min-height: 52px;
 	}
 
 	img {
@@ -84,6 +86,16 @@
 		line-height: 1.125rem;
 		font-family: $font-titulo;
 		font-weight: $bold;
+	}
+
+	&.hover {
+		&:hover {
+			background-color: rgba(#4a8443, .05);
+
+			.titulo, .subtitulo {
+				//color: #ffffff;
+			}
+		}
 	}
 
 	&.block-item-page-top {

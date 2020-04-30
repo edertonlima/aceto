@@ -335,3 +335,13 @@ body * {
 	position: relative;
 	z-index: 10;
 }
+
+
+
+.flex {
+	display: flex;
+
+	.owl-item, .col-4 {
+		display: flex;
+	}
+}

@@ -63,8 +63,8 @@
 }
 
 @mixin scale-rotate() {
-	$scale: 1.2;
-	$rotate: -5deg;
+	$scale: 1.1;
+	$rotate: -2.5deg;
 	-webkit-transform: scale($scale) rotate($rotate);
 	-moz-transform: scale($scale) rotate($rotate);
 	-o-transform: scale($scale) rotate($rotate);

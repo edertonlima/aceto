@@ -61,7 +61,7 @@
 					</div>
 				</div>
 				<div class="col-12 border copy">
-					<p>© 2020 Associação Comercial e Empresarial de Teófilo Otoni.</p>
+					<p>© <?php echo date('Y') . ' ' . get_bloginfo( 'name' ); ?>.</p>
 				</div>
 			</div>
 

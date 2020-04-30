@@ -21,6 +21,10 @@ add_filter('show_admin_bar', '__return_false');
 add_theme_support( 'post-thumbnails' );
 
 
+// add excerpt
+add_post_type_support( 'post', 'excerpt' );
+
+
 
 // CUSTOM POST
 // BENEFÍCIOS
@@ -54,89 +58,12 @@ function post_type_beneficios() {
 	    'hierarchical' => false,
 	    'menu_position' => null,
 	    'menu_icon' => 'dashicons-yes-alt',
-	    'supports' => array('title','thumbnail','excerpt')
+	    'supports' => array('title','thumbnail','excerpt','editor')
 	  );
 
     register_post_type( 'beneficios', $args );
 }
 
-/*
-// PROJETOS
-add_action( 'init', 'create_post_type_projetos' );
-function create_post_type_projetos() {
-
-	$labels = array(
-	    'name' => _x('Projetos', 'post type general name'),
-	    'singular_name' => _x('Projeto', 'post type singular name'),
-	    'add_new' => _x('Adicionar novo', 'projeto'),
-	    'add_new_item' => __('Adicionar novo'),
-	    'edit_item' => __('Editar'),
-	    'new_item' => __('Novo post'),
-	    'all_items' => __('Todos as post'),
-	    'view_item' => __('Visualizar post'),
-	    'search_items' => __('Procurar Proyecto'),
-	    'not_found' =>  __('Nenhum post encontrado.'),
-	    'not_found_in_trash' => __('Nenhum post encontrado na lixeira.'),
-	    'parent_item_colon' => '',
-	    'menu_name' => 'Projetos'
-	);
-	$args = array(
-	    'labels' => $labels,
-	    'public' => true,
-	    'publicly_queryable' => true,
-	    'show_ui' => true,
-	    'show_in_menu' => true,
-
-		'rewrite'=> [
-			'slug' => 'projetos',
-			"with_front" => true,
-		],
-
-		"cptp_permalink_structure" => "/%categoria_projetos%/%postname%/",
-
-	    'capability_type' => 'post',
-	    'has_archive' => true,
-	    'hierarchical' => true,
-	    'menu_position' => null,
-	    'menu_icon' => 'dashicons-tag',
-	    'supports' => array('title','excerpt','thumbnail')
-	  );
-
-    register_post_type( 'projetos', $args );
-}
-
-add_action( 'init', 'create_taxonomy_categoria_projetos' );
-function create_taxonomy_categoria_projetos() {
-
-	$labels = array(
-	    'name' => _x( 'Categoria', 'taxonomy general name' ),
-	    'singular_name' => _x( 'Categoria', 'taxonomy singular name' ),
-	    'search_items' =>  __( 'Procurar categoria' ),
-	    'all_items' => __( 'Todas as categorias' ),
-	    'parent_item' => __( 'Categoria pai' ),
-	    'parent_item_colon' => __( 'Categoria pai:' ),
-	    'edit_item' => __( 'Editar categoria' ),
-	    'update_item' => __( 'Atualizar categoria' ),
-	    'add_new_item' => __( 'Adicionar nova categoria' ),
-	    'new_item_name' => __( 'Nova categoria' ),
-	    'menu_name' => __( 'Categoria' ),
-	);
-
-    register_taxonomy( 'categoria_projetos', array( 'projetos' ), array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'show_in_tag_cloud' => true,
-        'query_var' => true,
-		'rewrite' => array(
-		    'slug' => 'projetos',
-		    'with_front' => true,
-			)
-        )
-    );
-}
-*/
 
 // muda nome post
 function change_post_label() {
@@ -191,6 +118,18 @@ if( function_exists('acf_add_options_page') ) {
 	  'menu_title'  => 'Redes Sociais',
 	  'parent_slug' => 'configuracoes-gerais',
 	));
+
+	acf_add_options_sub_page(array(
+	  'page_title'  => 'Cabeçário',
+	  'menu_title'  => 'Cabeçário',
+	  'parent_slug' => 'configuracoes-gerais',
+	));
+
+	acf_add_options_sub_page(array(
+	  'page_title'  => 'Rodapé',
+	  'menu_title'  => 'Rodapé',
+	  'parent_slug' => 'configuracoes-gerais',
+	));
 }
 
 
@@ -214,8 +153,8 @@ add_filter('big_image_size_threshold', '__return_false');
 
 add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
 function wpdocs_theme_setup() {
-	add_image_size( 'thumb', 380, 380, true );
-	add_image_size( 'thumb-medium', 600, 600, true );
+	add_image_size( 'thumb', 370, 248, true );
+	//add_image_size( 'thumb-medium', 600, 600, true );
 	
 	add_image_size( 'wide-medium', 1100, 0, array( 'center', 'center' ) );
 	add_image_size( 'wide', 1600, 0, array( 'center', 'center' ) );
@@ -308,5 +247,88 @@ function load_more() {
 }
 add_action( 'wp_ajax_nopriv_load_more', 'load_more' );
 add_action( 'wp_ajax_load_more', 'load_more' );
+
+
+
+
+
+if(wp_get_current_user()->user_login == 'contato@startsite.com.br'){
+	$producao = true;
+}else{
+	$producao = true;
+}
+
+if($producao){
+	add_action('admin_head', 'my_custom_fonts');
+
+	function my_custom_fonts() {
+	  echo '<style>
+		#menu-media, #menu-comments, /*#menu-appearance, #menu-plugins, */#menu-tools, #menu-settings, #toplevel_page_edit-post_type-acf, #toplevel_page_edit-post_type-acf-field-group, 
+		#toplevel_page_zilla-likes, 
+		#screen-options-link-wrap, 
+		.acf-postbox h2 a, 
+		#the-list #post-94, 
+		#the-list #post-65, 
+		#commentstatusdiv, 
+		#commentsdiv, 
+		#toplevel_page_wpglobus_options, 
+		.taxonomy-category .form-field.term-parent-wrap, 
+		.wp-menu-separator, 
+		#menu-appearance, 
+		#wp-admin-bar-comments, 
+		#wp-admin-bar-comments
+		{
+			display: none!important;
+		}
+	  </style>';
+
+	  echo '
+		<script type="text/javascript">
+			jQuery.noConflict();
+
+			jQuery("document").ready(function(){
+				jQuery("#menu-media").remove();
+				jQuery("#menu-comments").remove();
+				/*jQuery("#menu-appearance").remove();
+				jQuery("#menu-plugins").remove();*/
+				jQuery("#menu-tools").remove();
+				jQuery("#menu-settings").remove();
+				jQuery("#toplevel_page_edit-post_type-acf").remove();
+				jQuery("#toplevel_page_edit-post_type-acf-field-group").remove();
+				jQuery("#toplevel_page_zilla-likes").html("");
+				jQuery(".taxonomy-category .form-field.term-parent-wrap").remove();
+				jQuery(".wp-menu-separator").remove();
+				jQuery("#toplevel_page_pmxi-admin-home li:nth-child(1)").remove();
+				jQuery("#toplevel_page_pmxi-admin-home li:nth-child(3)").remove();
+				jQuery("#toplevel_page_pmxi-admin-home li:nth-child(4)").remove();
+				jQuery("#toplevel_page_pmxi-admin-home li:nth-child(5)").remove();
+				jQuery("#toplevel_page_wpglobus_options").remove();
+				jQuery("#commentstatusdiv").remove();
+				
+				jQuery("#commentsdiv").remove();
+				jQuery("#wp-admin-bar-comments").remove();
+
+				jQuery(".user-rich-editing-wrap").remove();
+				jQuery(".user-admin-color-wrap").remove();
+				jQuery(".user-comment-shortcuts-wrap").remove();
+				jQuery(".user-admin-bar-front-wrap").remove();
+				jQuery(".user-language-wrap").remove();
+
+				jQuery("#toplevel_page_delete_all_posts").detach().insertBefore("#toplevel_page_pmxi-admin-home");
+				jQuery("#toplevel_page_delete_all_posts .wp-menu-name").html("Apagar Lojas");
+				jQuery("#toplevel_page_delete_all_posts .wp-first-item .wp-first-item").html("Apagar Todas");
+				jQuery("#toplevel_page_delete_all_posts ul").remove();
+
+				jQuery("wp-admin-bar-updates").remove();
+
+				jQuery("#menu-appearance").remove();
+				//jQuery("#menu-appearance li:nth-child(1)").remove();
+				//jQuery("#menu-appearance li:nth-child(2)").remove();
+				//jQuery("#menu-appearance li:nth-child(3)").remove();
+			});
+		</script>
+	  ';
+	}
+}
 
 ?>
