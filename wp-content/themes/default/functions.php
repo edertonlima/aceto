@@ -250,10 +250,16 @@ add_action( 'wp_ajax_load_more', 'load_more' );
 
 
 
+/* MENUS */
+add_action( 'after_setup_theme', 'register_menu' );
+function register_menu() {
+  register_nav_menu( 'primary', __( 'Menu', 'header' ) );
+}
 
 
-if(wp_get_current_user()->user_login == 'contato@startsite.com.br'){
-	$producao = true;
+
+if((wp_get_current_user()->user_login == 'contato@startsite.com.br') OR (wp_get_current_user()->user_login) == 'ederton'){
+	$producao = false;
 }else{
 	$producao = true;
 }
