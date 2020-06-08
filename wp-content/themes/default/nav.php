@@ -15,7 +15,7 @@
 			}
 		?>
 		
-		<li>
+		<li class="nav-social">
 			<?php 
 				if(get_field( 'url_facebook' , 'option' )){ ?>
 					<a href="<?php the_field( 'url_facebook' , 'option' ); ?>" title="<?php the_field( 'tit_facebook' , 'option' ); ?>"><i class="fab fa-facebook-square"></i></a>

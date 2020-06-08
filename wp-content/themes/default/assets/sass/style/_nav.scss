@@ -41,6 +41,25 @@
 			}
 		}
 	}
+
+	.nav-social {
+		a {
+			i {
+				color: $cor1;
+			}
+
+			&:hover {
+				i {
+					color: #4267b2;
+				}
+			}
+		}
+	}
+
+	&.nav-footer {
+		float: right;
+		margin: -8px 0 0 0;
+	}
 }
 
 

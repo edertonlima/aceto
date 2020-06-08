@@ -116,6 +116,17 @@
 			}
 		}
 	}*/
+
+	.row.blog.list-blog {
+		display: inline-block;
+
+		.col-4 {
+			float: left;
+			display: inline-block;
+			width: 50%;
+			max-width: 50%;
+		}
+	}
 }
 
 
@@ -342,7 +353,7 @@
 		padding-bottom: 40px;
 	}
 
-	.nav {
+	.nav:not(.nav-footer) {
 		display: block;
 		position: fixed;
 		background: $cor1;
@@ -394,6 +405,28 @@
 				}
 			}
 		}
+	}
+
+	.nav.nav-footer {
+		float: none;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+
+		ul {
+			display: block;
+			li {
+				display: inline-block;
+			}
+		}
+	}
+
+
+	.footer .border.copy {
+		margin: 5px auto;
+		padding: 0;
+		text-align: center;
+		border: none;
 	}
 
 
@@ -460,6 +493,10 @@
 			max-width: 600px;
 		}		
 	}
+
+	#associese {
+		display: none;
+	}
 }
 
 
@@ -478,6 +515,18 @@
 			[class*="col-"] {
 				width: 100%;
 			}
+		}
+	}
+
+	.row.blog.list-blog {
+		display: block;
+		width: 100%;
+
+		.col-4 {
+			float: none;
+			display: block;
+			width: 100%;
+			max-width: 400px;
 		}
 	}
 

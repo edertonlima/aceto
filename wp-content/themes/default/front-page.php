@@ -254,6 +254,7 @@
 		margin:0,
 		responsiveClass:true,
 		nav:false,
+		autoplay:true
 
 		//navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
 		//rtl:true,

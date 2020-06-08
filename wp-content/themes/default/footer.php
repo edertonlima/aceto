@@ -65,8 +65,45 @@
 						</div>		
 					</div>
 				</div>
-				<div class="col-12 border copy">
-					<p>© <?php echo date('Y') . ' ' . get_bloginfo( 'name' ); ?>.</p>
+				<div class="col-6 border copy">
+					<p>© <?php echo date('Y') . ' ' . get_bloginfo( 'name' ); ?>.</p>				
+				</div>
+				<div class="col-6 border copy">
+					<nav class="nav nav-footer">
+						<ul>
+							
+							<li class="nav-social">
+								<?php 
+									if(get_field( 'url_facebook' , 'option' )){ ?>
+										<a href="<?php the_field( 'url_facebook' , 'option' ); ?>" title="<?php the_field( 'tit_facebook' , 'option' ); ?>"><i class="fab fa-facebook-square"></i></a>
+									<?php } 
+								?>
+
+								<?php 
+									if(get_field( 'url_instagram' , 'option' )){ ?>
+										<a href="<?php the_field( 'url_instagram' , 'option' ); ?>" title="<?php the_field( 'tit_instagram' , 'option' ); ?>"><i class="fab fa-instagram"></i></a>
+									<?php } 
+								?>
+
+								<?php 
+									if(get_field( 'url_twitter' , 'option' )){ ?>
+										<a href="<?php the_field( 'url_twitter' , 'option' ); ?>" title="<?php the_field( 'tit_twitter' , 'option' ); ?>">
+											<i class="fab fa-twitter"></i>
+										</a>
+									<?php } 
+								?>
+
+								<?php 
+									if(get_field( 'url_youtube' , 'option' )){ ?>
+										<a href="<?php the_field( 'url_youtube' , 'option' ); ?>" title="<?php the_field( 'tit_youtube' , 'option' ); ?>">
+											<i class="fab fa-youtube"></i>
+										</a>
+									<?php } 
+								?>
+							</li>
+
+						</ul>
+					</nav>
 				</div>
 			</div>
 
